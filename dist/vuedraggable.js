@@ -188,6 +188,7 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
             return _this3.onDragMove(evt, originalEvent);
           } });
         !('draggable' in options) && (options.draggable = '>*');
+        const Sortable = require("sortablejs").default;
         this._sortable = new Sortable(this.rootContainer, options);
         this.computeIndexes();
       },

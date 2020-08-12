@@ -152,6 +152,7 @@
 
         const options = Object.assign({}, this.options, optionsAdded, { onMove: (evt, originalEvent) => { return this.onDragMove(evt, originalEvent); } })
         !('draggable' in options) && (options.draggable = '>*');
+        const Sortable = require("sortablejs").default;
         this._sortable = new Sortable(this.rootContainer, options)
         this.computeIndexes()
       },
